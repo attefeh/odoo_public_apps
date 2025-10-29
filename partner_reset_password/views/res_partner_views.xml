@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <xpath expr="//sheet" position="before">
                 <header>
-                    <button name="reset_user_password" string="Reset Password" type="object" class="oe_highlight"/>
+                    <button name="reset_user_password" string="Reset Password" type="object" class="oe_highlight" invisible="is_company" groups="base.group_erp_manager"/>
                 </header>
             </xpath>
         </field>
