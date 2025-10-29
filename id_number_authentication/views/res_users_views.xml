@@ -8,6 +8,9 @@
             <xpath expr="//label[@for='login']" position="replace">
                 <label for="login" string="ID Number"/>
             </xpath>
+            <xpath expr="//field[@name='login']" position="attributes">
+                <attribute name="placeholder">Enter student ID Number</attribute>
+            </xpath>
         </field>
     </record>
 

@@ -2,10 +2,10 @@
 <odoo>
     <template id="id_number_authentication.login" inherit_id="web.login" name="Password policy data for auth_signup">
         <xpath expr="//label[@for='login']" position="replace">
-            <label for="login">Your ID Number</label>
+            <label for="login">ID Number</label>
         </xpath>
         <xpath expr="//input[@name='login']" position="attributes">
-            <attribute name="placeholder">Enter your ID Number</attribute>
+            <attribute name="placeholder">Student ID Number</attribute>
         </xpath>
     </template>
 </odoo>

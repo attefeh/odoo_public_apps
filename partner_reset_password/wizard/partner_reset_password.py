@@ -17,4 +17,9 @@ class PartnerResetPassword(models.TransientModel):
             raise UserError(_("New password fields cannot be empty."))
         if self.new_password != self.re_new_password:
             raise UserError(_("The new passwords do not match."))
+        # reset
         self.user_id.write({'password': self.new_password})
+        # log it
+        self.env['res.partner'].browse(self.user_id.partner_id.id).message_post(
+            body=_("Password has been reset by %s") % self.env.user.name
+        )

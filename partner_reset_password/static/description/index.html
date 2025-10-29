@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ID Number Authentication</title>
+    <title>Partner Reset Password</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; color: #333; padding: 20px; }
         h1 { color: #007bff; }
@@ -12,27 +12,23 @@
 </head>
 <body>
 
-    <h1>ID Number Authentication</h1>
-    <p>This module allows users to signup, login and reset their password with their unique ID number.</p>
+    <h1>🔐 Reset User's Password</h1>
+    <p>This module allows administrators to securely reset passwords for user accounts, including Portal users and Internal Users from their partner's form.</p>
 
     <h2>✨ Key Features</h2>
     <ul>
-        <li>Signup, login and reset password with ID number</li>
-        <li>ID number is saved on related partner</li>
-        <li>ID number is uniq per user</li>
-        <li>By changing ID number on partner's form or user's form, the other one will be changed automatically</li>
+        <li>Reset passwords directly from the partner form</li>
+        <li>Audit log of password reset actions</li>
         <li>Compatible with both community version and enterprise version</li>
         <li>Compatible with multicompany database </li>
     </ul>
 
     <h2>📸 Screenshots</h2>
-    <p>Below is a preview of the changed views:</p>
-    <img src="screenshot1.png" alt="ID number as login field on login page">
-    <img src="screenshot2.png" alt="ID number field on user form">
-    <img src="screenshot3.png" alt="ID number field on partner form">
+    <p>Below is a preview of the password reset button and wizard in the user form:</p>
+    <img src="screenshot.png" alt="Password Reset Button and Wizard Screenshot">
 
     <h2>⚙️ Technical Notes</h2>
-    <p>This module adds a field for ID number on <code>res.partner</code> and <code>res.users</code> models. It overrides the authentication methods to allow login and password reset using the ID number.</p>
+    <p>This module adds a button to the <code>res.partner</code> form view. When clicked, it opens a wizard to ask for new password. By confirming it will update related user to that partner's password.</p>
 
     <h2>📦 Installation</h2>
     <ul>
